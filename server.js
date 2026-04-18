@@ -134,8 +134,12 @@ const io = new SocketIoServer(server, {
 
 // ✅ Middleware
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
-    credentials: true
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://careerup-frontend.vercel.app"
+  ],
+  credentials: true
 }));
 
 app.use(nocache());
